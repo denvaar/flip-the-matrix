@@ -1,5 +1,7 @@
 # flip-the-matrix
-Just a simple puzzle game.
+:space_invader: Just a simple puzzle game. :space_invader:
+
+:books: Mostly for experimenting :microscope:
 
 Inspiration from this: https://www.hackerrank.com/challenges/flipping-the-matrix
 
