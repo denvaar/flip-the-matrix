@@ -1,0 +1,86 @@
+html, body {
+  font-family: "Varela Round", sans-serif;
+  color: #4e4e4e;
+}
+
+.game-container {
+}
+
+.block-container {
+  width: 520px;
+  height: 520px;
+  margin: 0 auto;
+  background: #2196F3;
+  padding: 5px;
+}
+
+.block {
+  background: #009688;
+  color: #fff;
+  text-align: center;
+  font-size: 75px;
+  cursor: default;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2px;
+  box-shadow: 0 1px 10px #4a4a4a;
+}
+
+.edge:hover {
+  background: #00a999;
+  cursor: pointer;
+  height: 500px;
+}
+
+.sum {
+  color: #ff9800;
+}
+
+.green {
+  color: green;
+}
+
+.direction-vert:before {
+  position: absolute;
+  font-size: 100px;
+  color: #000;
+  opacity: 0.3;
+  text-align: center;
+  content: "\f07d";
+  font-family: FontAwesome;
+}
+
+.direction-hor:before {
+  position: absolute;
+  font-size: 100px;
+  color: #000;
+  opacity: 0.3;
+  text-align: center;
+  content: "\f07e";
+  font-family: FontAwesome;
+}
+
+.target-overlay {
+  width: 250px;
+  height: 250px;
+  padding: 4px;
+  background: #36f4de;
+  pointer-events: none;
+  position: absolute;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+   opacity: 0.3;
+  }
+
+  100% {
+   opacity: 0;
+  }
+}
+
