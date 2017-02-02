@@ -1,15 +1,35 @@
 var webpack = require('webpack');
 
+var isProductionBuild = process.env.NODE_ENV === 'production';
+
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     publicPath: '/',
-    //publicPath: 'http://localhost:3000',
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  plugins: (function () {
+    var plugins = [];
+    if (isProductionBuild) {
+      plugins.push(new webpack.DefinePlugin({
+        "process.env": {
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        }
+      }));
+      plugins.push(new webpack.optimize.UglifyJsPlugin({
+        minimize: true,
+        compress: {
+          warnings: false
+        }
+      }));
+    } else {
+      /* development-specific plugins here */
+    }
+    return plugins;
+  })(),
   module: {
     loaders: [
       {

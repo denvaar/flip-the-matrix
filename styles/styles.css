@@ -63,11 +63,12 @@ html, body {
 .target-overlay {
   width: 250px;
   height: 250px;
+  border-radius: 10px;
   padding: 4px;
   background: #36f4de;
   pointer-events: none;
   position: absolute;
-  animation: pulse 1s infinite;
+  animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
@@ -84,3 +85,7 @@ html, body {
   }
 }
 
+.score-counter {
+  text-decoration: underline;
+  text-align: center;
+}
