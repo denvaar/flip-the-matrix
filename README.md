@@ -11,3 +11,5 @@ Wanna see it?
     cd flip-the-matrix
     npm install
     npm start
+
+Generate Production bundle: `npm run-script prod`

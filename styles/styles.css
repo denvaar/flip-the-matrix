@@ -7,18 +7,19 @@ html, body {
 }
 
 .block-container {
-  width: 520px;
-  height: 520px;
+  max-width: 524px;
+  max-height: 524px;
   margin: 0 auto;
   background: #2196F3;
   padding: 5px;
 }
 
 .block {
+  font-family: monospace;
   background: #009688;
   color: #fff;
   text-align: center;
-  font-size: 75px;
+  font-size: 6vh;
   cursor: default;
   border-radius: 5px;
   display: inline-block;
@@ -37,12 +38,12 @@ html, body {
 }
 
 .green {
-  color: green;
+  color: #4CAF50;
 }
 
 .direction-vert:before {
   position: absolute;
-  font-size: 100px;
+  font-size: 8vh;
   color: #000;
   opacity: 0.3;
   text-align: center;
@@ -52,7 +53,7 @@ html, body {
 
 .direction-hor:before {
   position: absolute;
-  font-size: 100px;
+  font-size: 8vh;
   color: #000;
   opacity: 0.3;
   text-align: center;
@@ -88,4 +89,31 @@ html, body {
 .score-counter {
   text-decoration: underline;
   text-align: center;
+}
+
+.progress-bar {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 500px;
+  height: 20px;
+  background: #eaeaea;
+  border: 1px solid #737373;
+  border-radius: 15px;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: repeating-linear-gradient( 45deg, #FF9800, #FF9800 10px, #FFC107 10px, #FFC107 20px);
+  border-radius: 30px 0 0 30px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.instructions {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.exciting {
+  color: #E91E63;
 }

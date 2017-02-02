@@ -43,6 +43,16 @@ export const findMaxSum = (puzzle) => {
   return maxSum;
 }
 
+export const generatePuzzle = (size) => {
+  let puzzle = [];
+  for (let i = 0; i < size; i++) {
+    puzzle[i] = [];
+    for (let j = 0; j < size; j++) {
+      puzzle[i][j] = Math.floor((Math.random() * 200) + 1);
+    }
+  }
+  return puzzle;
+}
 
 export const handleMouseMove = (event) => {
   let x = event.pageX - event.target.offsetLeft;
